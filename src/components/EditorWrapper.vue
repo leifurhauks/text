@@ -618,28 +618,23 @@ export default {
 
 	#files-public-content {
 		height: auto;
-		#editor-wrapper {
-			position: relative;
-		}
 		#editor-container {
 			top: 0;
 			width: 100%;
 
 			#editor::v-deep .menubar {
-				// sticky position is not working as body is our scroll container
-				position: fixed;
-				top: 50px;
+				position: sticky;
+				top: 0;
 				width: 100%;
 			}
 
 			#editor {
-				padding-top: 50px;
 				overflow: auto;
 				// Fix for IE11 issue where the menubar sometimes was positioned under the text
 				z-index: 1000;
 			}
 			.has-conflicts #editor {
-				padding-top: 0px;
+				padding-top: 0;
 			}
 		}
 	}
