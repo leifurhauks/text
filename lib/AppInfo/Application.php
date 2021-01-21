@@ -61,6 +61,7 @@ class Application extends App implements IBootstrap {
 			$markdownFile->addMimetype('text/markdown');
 			$markdownFile->addMimetype('text/plain');
 			$markdownFile->setIconClass('icon-filetype-text');
+			$markdownFile->setOrder(10);
 			$templateManager->registerTemplateFileCreator($markdownFile);
 		});
 	}
