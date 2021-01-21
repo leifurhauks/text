@@ -57,7 +57,7 @@ class Application extends App implements IBootstrap {
 
 	public function boot(IBootContext $context): void {
 		$context->injectFn(function (ITemplateManager $templateManager, IL10N $l) {
-			$markdownFile = new TemplateFileCreator(Application::APP_NAME, $l->t('New text file'), '.md');
+			$markdownFile = new TemplateFileCreator(Application::APP_NAME, $l->t('New text document'), '.md');
 			$markdownFile->addMimetype('text/markdown');
 			$markdownFile->addMimetype('text/plain');
 			$markdownFile->setIconClass('icon-filetype-text');
